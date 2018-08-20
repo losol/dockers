@@ -1,4 +1,4 @@
-# Inspired by https://docs.docker.com/compose/wordpress/
+# Inspired by https://docs.microsoft.com/en-us/azure/app-service/containers/tutorial-multi-container-app
 version: '3.3'
 
 services:
