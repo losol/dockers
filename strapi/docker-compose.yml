@@ -1,4 +1,5 @@
 version: '3'
+# Source: https://github.com/strapi/strapi-docker/blob/master/examples/prod/docker-compose.yml
 
 services:
   strapi:
