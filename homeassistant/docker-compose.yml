@@ -8,4 +8,5 @@ services:
     environment:
       - TZ=Europe/Oslo
     restart: always
-    network_mode: host
+    ports: 
+      - "8123:8123"
