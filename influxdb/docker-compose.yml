@@ -1,14 +1,10 @@
-# Set admin user name and password in .env file
 version: '2'
 services:
   influxdb:
-    image: influxdb:latest
+    image: quay.io/influxdb/influxdb:v2.0.4
     container_name: influxdb
+    restart: unless-stopped
     ports:
       - '8086:8086'
     volumes:
-      - /srv/influxdb:/var/lib/influxdb
-    environment:
-      - INFLUXDB_DB=home
-      - INFLUXDB_ADMIN_USER=${INFLUXDB_USERNAME}
-      - INFLUXDB_ADMIN_PASSWORD=${INFLUXDB_PASSWORD}
+      - /srv/influxdb/data:/var/lib/influxdb
