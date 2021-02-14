@@ -1,12 +1,11 @@
 version: '3'
 services:
   homeassistant:
-    container_name: home-assistant
-    image: homeassistant/home-assistant
+    container_name: homeassistant
+    image: homeassistant/home-assistant:stable
+    ports:
+      - '8123:8123'
     volumes:
-      - ./myconfig:/config
-    environment:
-      - TZ=Europe/Oslo
-    restart: always
-    ports: 
-      - "8123:8123"
+      - /srv/homeassistant/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
