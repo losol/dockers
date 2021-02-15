@@ -2,7 +2,6 @@ version: '3.5'
 services:
   mosquitto:
     image: eclipse-mosquitto
-    hostname: mosquitto
     container_name: mosquitto
     ports:
       - '1883:1883'
