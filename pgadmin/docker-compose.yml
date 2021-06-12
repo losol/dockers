@@ -12,5 +12,7 @@ services:
     volumes:
       - ./data:/var/lib/pgadmin
       - ./certs:/certs
+      - ./config/config_system.py:/pgadmin4/config_system.py
+      - ./config/servers.json:/pgadmin4/servers.json
     ports:
       - '5050:5050'
