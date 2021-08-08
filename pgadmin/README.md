@@ -2,6 +2,12 @@
 
 pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL.
 
+## Get started
+
+1. Spin up the container by running `docker-compose up` in the pgadmin folder
+1. Access pgadmin by opening `http://localhost:5050` in your browser
+1. Log in with your username/password. Default user name is `admin@admin.com`, with password `goodpassword`
+
 ## Set up ssl for localhost
 
 To enable ssl, pgAdmin expects the files `/certs/server.cert` and `/certs/server.key`.
