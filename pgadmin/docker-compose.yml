@@ -16,3 +16,6 @@ services:
       - ./config/servers.json:/pgadmin4/servers.json
     ports:
       - '5050:5050'
+networks:
+  default:
+    name: postgres
