@@ -5,7 +5,7 @@ PostgreSQL is a powerful, open source object-relational database system with ove
 ## Get started
 
 1. Run `docker-compose up` in the postgres folder
-1. Use psql for managing the database: `docker exec -it postgres psql postgresql://postgres:postgres@postgres`
+1. Use psql for managing the database: `docker exec -it postgres psql postgresql://pguser:pgpwd@postgres`
 
 ## Useful links
 

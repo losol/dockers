@@ -5,8 +5,8 @@ services:
     container_name: 'postgres'
     environment:
       - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=pguser
+      - POSTGRES_PASSWORD=pgpwd
     volumes:
       - ./data:/var/lib/postgresql/data/
     restart: unless-stopped
