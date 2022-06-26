@@ -6,6 +6,6 @@ services:
     ports:
       - '8123:8123'
     volumes:
-      - /srv/homeassistant/config:/config
+      - ./config:/config
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
