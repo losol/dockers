@@ -12,8 +12,10 @@ services:
     restart: unless-stopped
     ports:
       - '5432:5432'
+
 networks:
   default:
     name: postgres
+
 volumes:
   data:

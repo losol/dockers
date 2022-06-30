@@ -8,4 +8,18 @@ services:
       - '8086:8086'
     volumes:
       - ./data:/var/lib/influxdb2
-      - /telegraf/telegraf.conf:/var/lib/influxdb
+  telegraf:
+    image: telegraf
+    container_name: telegraf
+    links:
+      - influxdb
+    volumes:
+      - ./telegraf:/etc/telegraf
+    environment:
+      - TELEGRAF_MQTT_USER=${TELEGRAF_MQTT_USER}
+      - TELEGRAF_MQTT_PASSWORD=${TELEGRAF_MQTT_PASSWORD}
+      - TELEGRAF_INFLUXDB_TOKEN=${TELEGRAF_INFLUXDB_TOKEN}
+
+networks:
+  default:
+    name: iot

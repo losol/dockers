@@ -11,3 +11,7 @@ services:
       - ./data:/mosquitto/data
       - ./log:/mosquitto/log
     restart: unless-stopped
+
+networks:
+  default:
+    name: iot
