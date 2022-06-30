@@ -7,3 +7,4 @@ After spinning up the docker, it will be available in your browser at `localhost
 ## Read more:
 
 - [InfluxDB documentation](https://docs.influxdata.com/influxdb/v2.3/)
+- [InfluxDB Docker docs](https://hub.docker.com/_/influxdb)
