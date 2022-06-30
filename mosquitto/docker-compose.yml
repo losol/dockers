@@ -9,5 +9,5 @@ services:
     volumes:
       - ./config:/mosquitto/config
       - ./data:/mosquitto/data
-      - ./log:/mosqitto/log
+      - ./log:/mosquitto/log
     restart: unless-stopped
