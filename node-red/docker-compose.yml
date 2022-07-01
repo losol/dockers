@@ -1,13 +1,12 @@
 version: '3.3'
 
 services:
-    node-red:
-        image: nodered/node-red
-        environment:
-            - TZ=Europe/Oslo
-        ports:
-            - '1880:1880'
-        volumes:
-            - './data:/data'
-        container_name: nodered
-        
+  node-red:
+    image: nodered/node-red:latest-16
+    environment:
+      - TZ=Europe/Oslo
+    ports:
+      - '1880:1880'
+    volumes:
+      - './data:/data'
+    container_name: nodered
