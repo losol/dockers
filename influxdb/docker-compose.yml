@@ -1,4 +1,5 @@
-version: '2'
+version: '3'
+
 services:
   influxdb:
     image: influxdb
@@ -8,6 +9,7 @@ services:
       - '8086:8086'
     volumes:
       - ./data:/var/lib/influxdb2
+
   telegraf:
     image: telegraf
     container_name: telegraf
@@ -16,9 +18,11 @@ services:
     volumes:
       - ./telegraf:/etc/telegraf
     environment:
-      - TELEGRAF_MQTT_USER=${TELEGRAF_MQTT_USER}
-      - TELEGRAF_MQTT_PASSWORD=${TELEGRAF_MQTT_PASSWORD}
+      - TELEGRAF_MQTT_USER=${TELEGRAF_MQTT_USER:-mqtt}
+      - TELEGRAF_MQTT_PASSWORD=${TELEGRAF_MQTT_PASSWORD:-mqtt}
       - TELEGRAF_INFLUXDB_TOKEN=${TELEGRAF_INFLUXDB_TOKEN}
+      - TELEGRAF_INFLUXDB_ORG=${TELEGRAF_INFLUXDB_ORG}
+      - TELEGRAF_INFLUXDB_BUCKET=${TELEGRAF_INFLUXDB_BUCKET}
 
 networks:
   default:
