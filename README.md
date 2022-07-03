@@ -6,6 +6,7 @@ For some software and services.
 - Home assistant: port `8123`
 - InfluxDB: port `8086`
 - Mosquitto: ports `1883` and `9001`
+- Nginx Proxy manager: port `81`
 - Node-red: port `1880`
 - PgAdmin: port `5050`
 - Posgres: port `5432`
