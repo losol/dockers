@@ -1,3 +1,4 @@
-data/mosquitto.db
 config/credentials
+config/mosquitto.passwd
+data/mosquitto.db
 log/mosquitto.log
