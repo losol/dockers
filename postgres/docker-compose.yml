@@ -1,17 +1,16 @@
-version: '3.3'
 services:
   database:
-    image: 'postgres'
-    container_name: 'postgres'
+    image: "postgres"
+    container_name: "postgres"
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=pguser
       - POSTGRES_PASSWORD=pgpwd
     volumes:
-      - ./data:/var/lib/postgresql/data/
+      - ./data:/var/lib/postgresql
     restart: unless-stopped
     ports:
-      - '5432:5432'
+      - "5432:5432"
 
 networks:
   default:
