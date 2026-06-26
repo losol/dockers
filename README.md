@@ -5,6 +5,7 @@ For some software and services.
 - Grafana: port `3000`
 - Home assistant: port `8123`
 - InfluxDB: port `8086`
+- MongoDB: port `27017`
 - Mosquitto: ports `1883` and `9001`
 - Nginx Proxy manager: port `81`
 - Node-red: port `1880`

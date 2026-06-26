@@ -1,0 +1,19 @@
+services:
+  database:
+    image: "mongo"
+    container_name: "mongodb"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongouser
+      - MONGO_INITDB_ROOT_PASSWORD=mongopwd
+    volumes:
+      - ./data:/data/db
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+
+networks:
+  default:
+    name: mongodb
+
+volumes:
+  data:
